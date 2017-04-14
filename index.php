@@ -18,6 +18,16 @@
 									<a href="#" class="w-links"><span class="w-menu-option">ACCOUNT</span></a>
 								</li>
 							</ul>
+							<?php wp_nav_menu(array(
+								'menu' => 'cart',
+								'menu_class' => 'w-cart-menu',
+								'menu_id' => '',
+								'container' => '',
+								'container_class' => '',
+								'container_id' => '',
+								'fallback_cb' => false,
+								'before' => '\001c',
+							)); ?>
 						</div>
 					</div>
 				</div>
