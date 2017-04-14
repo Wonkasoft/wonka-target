@@ -1,33 +1,27 @@
 /*
-	Theme Name: Wonka Targets
-	Description: Custom built theme for WONKASOFT collection
-	Version: 1.0.0
-	Author: Wonkasoft (@wonkasoft)
-	Author URI: http://wonkasoft.com
-	Tags: CUSTOM, HTML5, CSS3, JQUERY, JAVASCRIPT
+    Theme Name: Wonka Targets
+    Description: Custom built theme for WONKASOFT collection
+    Version: 1.0.0
+    Author: Wonkasoft (@wonkasoft)
+    Author URI: http://wonkasoft.com
+    Tags: CUSTOM, HTML5, CSS3, SCSS, JQUERY, JAVASCRIPT, GRID SYSTEM
 */
-
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
 @font-face {
-	font-family:  'wonka-icons';
-	src: url('./assets/fonts/wonka-icons.otf');
-}
-
+  font-family: 'wonka-icons';
+  src: url("./assets/fonts/wonka-icons.otf"); }
 a {
-	transition:  all .3s ease-in-out;
-}
+  transition: all .3s ease-in-out; }
 
 html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
+  margin: 0;
+  padding: 0;
+  height: 100%; }
 
 * {
-	box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 article,
 aside,
@@ -35,34 +29,24 @@ footer,
 header,
 nav,
 section {
-	display: block;
-}
+  display: block; }
 
 a:hover {
-	text-decoration: none;
-}
-
-.w-cart-icon {
-
-}
+  text-decoration: none; }
 
 .w-cart-icon:after {
-	font-family: 'wonka-icons';
-	content: '\001c';
-	display:  inline-block;
-}
+  font-family: 'wonka-icons';
+  content: '\001c';
+  display: inline-block; }
 
-#w-header>div>div>div>div>div {
-	margin-top: 15px;
-}
+#w-header > div > div > div > div > div {
+  margin-top: 15px; }
 
 .w-menu-item {
-	list-style: none;
-	display: inline-block;
-	padding:  0 15px;
-	border-right:  1px solid #000;
-}
+  list-style: none;
+  display: inline-block;
+  padding: 0 15px;
+  border-right: 1px solid #000; }
 
 .w-menu-item:last-child {
-	border: none;
-}
+  border: none; }

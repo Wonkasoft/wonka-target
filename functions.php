@@ -40,6 +40,8 @@ function wonka_targets_setup() {
 	register_nav_menus( array(
 		'top'    => __( 'Top Menu', 'wonka-target' ),
 		'cart' => __( 'Cart Menu', 'wonka-target' ),
+		'sidebar' => __( 'Side Menu', 'wonka-target' ),
+		'footer' => __( 'Footer Menu', 'wonka-target' ),
 	) );
 
 	/*
@@ -73,6 +75,7 @@ function wonka_targets_setup() {
 		'width'       => 250,
 		'height'      => 250,
 		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
 	) );
 
 	// Add theme support for Custom Logo.
