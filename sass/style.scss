@@ -1,32 +1,38 @@
 /*
-	Theme Name: Wonka Targets
-	Description: Custom built theme from the WONKASOFT collection
-	Version: 1.0.0
-	Author: Wonkasoft (@wonkasoft)
-	Author URI: http://wonkasoft.com
-	Tags: CUSTOM, HTML5, CSS3, JQUERY, JAVASCRIPT
+    Theme Name: Wonka Targets
+    Theme URI: https://wonkasoft.com/themes/wonka-targets/
+    Author: Wonkasoft Team (@wonkasoft)
+    Author URI: https://wonkasoft.com
+    Description: In 2017, our team wanted to build a new responsive site with a sleek, modern design. Our Tactical Theme has a full-width, and a container grid template. This theme is fully compatible with WooCommerce for your tactical store. Creating a Tactical website with WordPress has never been easier.
+    Version: 1.0.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Text Domain: wonka-targets
+    Tags: custom, html5, css3, sass, scss, jquery, javascript, grid system, one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+    This theme, like WordPress, is licensed under the GPL.
+    Use it to make something cool, have fun, and share what you've learned with others.
 */
 
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
 @font-face {
-	font-family:  'wonka-icons';
-	src: url('./assets/fonts/wonka-icons.otf');
+    font-family:  'wonka-icons';
+    src: url('./assets/fonts/wonka-icons.otf');
 }
 
 a {
-	transition:  all .3s ease-in-out;
+    transition:  all .3s ease-in-out;
 }
 
 html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 article,
@@ -35,11 +41,11 @@ footer,
 header,
 nav,
 section {
-	display: block;
+    display: block;
 }
 
 a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .w-cart-icon {
@@ -47,22 +53,22 @@ a:hover {
 }
 
 .w-cart-icon:after {
-	font-family: 'wonka-icons';
-	content: '\001c';
-	display:  inline-block;
+    font-family: 'wonka-icons';
+    content: '\001c';
+    display:  inline-block;
 }
 
 #w-header>div>div>div>div>div {
-	margin-top: 15px;
+    margin-top: 15px;
 }
 
 .w-menu-item {
-	list-style: none;
-	display: inline-block;
-	padding:  0 15px;
-	border-right:  1px solid #000;
+    list-style: none;
+    display: inline-block;
+    padding:  0 15px;
+    border-right:  1px solid #000;
 }
 
 .w-menu-item:last-child {
-	border: none;
+    border: none;
 }
