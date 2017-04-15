@@ -16,6 +16,11 @@
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
+
+// Theme Colors
+$header-color: #253c5e;
+$subheader-color: #505148;
+
 @font-face {
     font-family:  'wonka-icons';
     src: url('./assets/fonts/wonka-icons.otf');
@@ -48,28 +53,72 @@ a:hover {
     text-decoration: none;
 }
 
-.w-cart-icon {
-
+/*
+Header
+*/
+#w-header {
+  background-color: $header-color;
+  height: 140px;
 }
 
-.w-cart-icon:after {
-    font-family: 'wonka-icons';
-    content: '\001c';
-    display:  inline-block;
+#w-header>div>div>div>div {
+    margin-top: 10px;
 }
 
-#w-header>div>div>div>div>div {
-    margin-top: 15px;
+.custom-logo {
+  position: absolute;
 }
 
-.w-menu-item {
+.w-head-space {
+  padding-bottom: 48px;
+  margin: 0 75px;
+}
+
+.w-nav-bar {
+  background-color: $subheader-color;
+  margin: 0 -15px;
+  padding: 8px;
+}
+
+.w-primary-menu {
+  margin: 0;
+}
+
+.w-primary-menu > li {
     list-style: none;
     display: inline-block;
     padding:  0 15px;
     border-right:  1px solid #000;
 }
 
-.w-menu-item:last-child {
+.w-primary-menu > li:first-child {
+    border-left: 1px solid #000;
+}
+
+.w-primary-menu > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.w-sub-menu > li:first-child > a:before {
+    font-family: 'wonka-icons';
+    content: '\001c';
+    display:  inline-block;
+    padding: 0 8px;
+}
+
+.w-sub-menu > li {
+    list-style: none;
+    display: inline-block;
+    padding:  0 15px;
+    border-right:  1px solid #000;
+}
+
+.w-sub-menu > li > a {
+  color: #fff;
+}
+
+.w-sub-menu > li:last-child {
     border: none;
-    
 }
