@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 <body>
   <div id="w-wrapper">
-    <header id="w-header" class="container-fluid">
-        <div class="row-fluid w-head-space">
+    <header id="w-header">
+      <div class="container-fluid">
+        <div class="row w-head-space">
           <div class="col-xs-12">
-            <div class="row justify-content-between">
+            <div class="row">
               <div class="col-xs-3 center">
                 <?php the_custom_logo();
                 if (!has_custom_logo()) {
@@ -13,24 +14,38 @@
                   <?php 
                 } ?>
               </div>
-                <?php wp_nav_menu( array( 
-                  'menu_class' => 'w-sub-menu', 
-                  'container_class' => 'col-xs-3',
-                  'theme_location' => 'sub', 
-                  'fallback_cb' => false,
-                  ) ); ?>
+              <?php wp_nav_menu( array( 
+                'menu_class' => 'w-sub-menu', 
+                'container_class' => 'col-xs-3 col-md-offset-6',
+                'theme_location' => 'sub', 
+                'fallback_cb' => false,
+                ) ); ?>
+              </div>
             </div>
-          </div>
-        </div> 
-            <?php wp_nav_menu( array( 
-                  'menu_class' => 'w-primary-menu', 
-                  'container_class' => 'col-xs-12 text-center w-nav-bar',
-                  'theme_location' => 'top', 
-                  'fallback_cb' => false,
-                  ) ); ?>
-      </header>
-      <main>
+          </div> 
+          <div class="row">
+            <div class="col-xs-12 w-nav-bar">
+
+              <?php wp_nav_menu( array( 
+                'menu_class' => 'w-primary-menu', 
+                'container_class' => 'col-xs-10 text-center',
+                'theme_location' => 'top', 
+                'fallback_cb' => false,
+                ) ); ?>
+                <div class="col-xs-2 col-md-pull-1 text-center">
+                  <div class="input-group w-search-form">
+                    <input type="search" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn w-search-button" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true">
+                      </span></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <main>
 
 
-      </main>
-      <?php get_footer(); ?>
+          </main>
+          <?php get_footer(); ?>

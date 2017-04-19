@@ -19,7 +19,9 @@
 
 // Theme Colors
 $header-color: #253c5e;
-$subheader-color: #505148;
+$navbar-color: #505148;
+$copyright-bar: #f01;
+$footer-color: #000;
 
 @font-face {
     font-family:  'wonka-icons';
@@ -33,7 +35,10 @@ a {
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+}
+
+body {
+  height: 100%;
 }
 
 * {
@@ -49,10 +54,6 @@ section {
     display: block;
 }
 
-a:hover {
-    text-decoration: none;
-}
-
 /*
 Header
 */
@@ -61,44 +62,55 @@ Header
   height: 140px;
 }
 
-#w-header>div>div>div>div {
-    margin-top: 10px;
-}
-
 .custom-logo {
   position: absolute;
+  z-index: 100;
+  left: 50px;
 }
 
 .w-head-space {
-  padding-bottom: 48px;
+  padding-bottom: 60px;
   margin: 0 75px;
 }
 
+.w-head-space > div {
+  margin-top: 10px;
+}
+
 .w-nav-bar {
-  background-color: $subheader-color;
-  margin: 0 -15px;
-  padding: 8px;
+  background-color: $navbar-color;
+  padding: 2px;
+  height: 38px;
+  box-shadow: 0px 4px 8px 2px #000;
 }
 
 .w-primary-menu {
-  margin: 0;
+  margin: -2px 0 0;
+  vertical-align: middle;
 }
 
 .w-primary-menu > li {
     list-style: none;
     display: inline-block;
-    padding:  0 15px;
-    border-right:  1px solid #000;
+    padding:  5px 40px;
+    height: 38px;
+    border-right:  1px solid #fff;
 }
 
 .w-primary-menu > li:first-child {
-    border-left: 1px solid #000;
+    border-left: 1px solid #fff;
 }
 
 .w-primary-menu > li > a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 20px;
+  font-family: Roboto medium;
+}
+
+.w-primary-menu > li > a:hover {
+  opacity: .2;
+  text-decoration: none;
 }
 
 .w-sub-menu > li:first-child > a:before {
@@ -112,13 +124,63 @@ Header
     list-style: none;
     display: inline-block;
     padding:  0 15px;
-    border-right:  1px solid #000;
+    border-right:  1px solid #fff;
 }
 
 .w-sub-menu > li > a {
   color: #fff;
 }
 
+.w-sub-menu > li > a:hover {
+  opacity: .2;
+  text-decoration: none;
+}
+
 .w-sub-menu > li:last-child {
     border: none;
+}
+
+.w-search-form {
+  margin-top: 1.5px;
+}
+
+div.w-search-form input.form-control:first-child {
+  border-radius: 20px 20px 0 0;
+}
+
+.w-search-button {
+  background-color: transparent;
+}
+
+.w-search-button > span {
+  color: #fff;
+  font-size: 18px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $footer-color;
+}
+
+footer > div > div {
+  height: 350px;
+  border-right: 2px solid #fff;
+}
+
+footer > div > div:last-child {
+  border-right: none;
+}
+
+footer > div > div > h3 {
+  color: #fff;
+  font-family: Roboto Black;
+}
+
+.w-copyright-bar {
+  background-color: $copyright-bar;
+  height: 35px;
+  vertical-align: middle;
+  padding: 8px;
 }

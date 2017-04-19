@@ -53,6 +53,7 @@ function wonka_target_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
+		'search-form',
 	) );
 
 	/*

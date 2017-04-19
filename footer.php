@@ -1,13 +1,30 @@
 <?php
 
 ?>
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<footer class="container-fluid">
+<div class="row">
+  <div class="col-xs-12 col-md-4">
+  <h3 class="text-center">CUSTOMER SERVICE</h3>
+    <hr/>
+  </div> 
+  <div class="col-xs-12 col-md-4">
+  <h3 class="text-center">POLICIES</h3>
+    <hr/>
+  </div>
+  <div class="col-xs-12 col-md-4">
+  <h3 class="text-center">CONNECT</h3>
+    <hr/>
+  </div>
+</div>
+<div class="row">
+ <div class="col-xs-12 w-copyright-bar">
+    Copyright &copy; <?php echo date('Y'); ?><?php bloginfo('name'); ?>. All rights reserved. |  Website: <?php _e('Created by', 'Wonkasoft'); ?>
+                <a href="//wonkasoft.com" title="Wonkasoft" target="_blank">Wonkasoft</a>.
+ </div>
+</div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <?php wp_footer(); ?>
 		</div>
 	</body>
