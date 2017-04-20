@@ -26,7 +26,8 @@ html, body {
   padding: 0; }
 
 body {
-  height: 100%; }
+  height: 100%;
+  color: #fff; }
 
 * {
   box-sizing: border-box; }
@@ -43,7 +44,7 @@ section {
 Header
 */
 #w-header {
-  background-color: #253c5e;
+  background: linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%);
   height: 140px; }
 
 .custom-logo {
@@ -59,7 +60,7 @@ Header
   margin-top: 10px; }
 
 .w-nav-bar {
-  background-color: #505148;
+  background: #505148;
   padding: 2px;
   height: 38px;
   box-shadow: 0px 4px 8px 2px #000; }
@@ -117,17 +118,70 @@ div.w-search-form input.form-control:first-child {
   border-radius: 20px 20px 0 0; }
 
 .w-search-button {
-  background-color: transparent; }
+  background: transparent; }
 
 .w-search-button > span {
   color: #fff;
   font-size: 18px; }
 
+.w-slider {
+  height: 761px; }
+
+.w-dealer-logos:before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px 1px #000;
+  z-index: 5; }
+
+.w-dealer-logos {
+  background: #0b1316;
+  height: 200px;
+  box-sizing: border-box; }
+
+.w-dealer-logos:after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px 1px #000;
+  z-index: 5; }
+
+.w-dealer-logos > div > div {
+  height: 194px; }
+
+.w-dealer-logos > div > div > div {
+  background: rgba(55, 55, 55, 0.7);
+  height: 194px;
+  padding: 36% 0; }
+
+.w-quick-select {
+  background: #5dbeff;
+  height: 435px;
+  padding: 20px; }
+
+.w-quick-select > div {
+  border-right: 2px solid #fff;
+  height: 395px; }
+
+.w-quick-select > div:last-child {
+  border-right: none; }
+
+.w-quick-select > div > div {
+  background: rgba(55, 55, 55, 0.7);
+  margin-top: 25px;
+  height: 350px; }
+
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #000; }
+  background: #000; }
 
 footer > div > div {
   height: 350px;
@@ -141,7 +195,8 @@ footer > div > div > h3 {
   font-family: Roboto Black; }
 
 .w-copyright-bar {
-  background-color: #f01;
+  background: #f01;
+  color: #fff;
   height: 35px;
   vertical-align: middle;
   padding: 8px; }

@@ -18,10 +18,15 @@
 \*------------------------------------*/
 
 // Theme Colors
-$header-color: #253c5e;
+$body-text: #fff;
+$header-color: linear-gradient(-214deg, rgba(37, 60, 94, .8) 0%, rgba(37, 60, 94, 1) 100%);
 $navbar-color: #505148;
-$copyright-bar: #f01;
+$whats-new-section: #5dbeff;
+$dealers-section: #0b1316;
+$dealer-placeholders: rgba(55,55,55, .7);
 $footer-color: #000;
+$copyright-bar: #f01;
+$copyright-text: #fff;
 
 @font-face {
     font-family:  'wonka-icons';
@@ -39,6 +44,7 @@ html, body {
 
 body {
   height: 100%;
+  color: $body-text;
 }
 
 * {
@@ -58,7 +64,7 @@ section {
 Header
 */
 #w-header {
-  background-color: $header-color;
+  background: $header-color;
   height: 140px;
 }
 
@@ -78,7 +84,7 @@ Header
 }
 
 .w-nav-bar {
-  background-color: $navbar-color;
+  background: $navbar-color;
   padding: 2px;
   height: 38px;
   box-shadow: 0px 4px 8px 2px #000;
@@ -149,7 +155,7 @@ div.w-search-form input.form-control:first-child {
 }
 
 .w-search-button {
-  background-color: transparent;
+  background: transparent;
 }
 
 .w-search-button > span {
@@ -157,11 +163,74 @@ div.w-search-form input.form-control:first-child {
   font-size: 18px;
 }
 
+.w-slider {
+  height: 761px;
+}
+
+.w-dealer-logos:before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px 1px #000;
+  z-index: 5;
+}
+
+.w-dealer-logos {
+ background: $dealers-section;
+ height: 200px;
+ box-sizing: border-box;
+}
+
+.w-dealer-logos:after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px 1px #000;
+  z-index: 5;
+}
+
+.w-dealer-logos > div > div {
+  height: 194px;
+}
+
+.w-dealer-logos > div > div > div {
+  background: $dealer-placeholders;
+  height: 194px;
+  padding: 36% 0;
+}
+
+.w-quick-select {
+  background: $whats-new-section;
+  height: 435px;
+  padding: 20px;
+}
+
+.w-quick-select > div {
+  border-right: 2px solid #fff;
+  height: 395px;
+}
+
+.w-quick-select > div:last-child {
+  border-right: none;
+}
+
+.w-quick-select > div > div {
+  background: $dealer-placeholders;
+  margin-top: 25px;
+  height: 350px;
+}
+
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
-  background-color: $footer-color;
+  background: $footer-color;
 }
 
 footer > div > div {
@@ -179,7 +248,8 @@ footer > div > div > h3 {
 }
 
 .w-copyright-bar {
-  background-color: $copyright-bar;
+  background: $copyright-bar;
+  color: $copyright-text;
   height: 35px;
   vertical-align: middle;
   padding: 8px;
