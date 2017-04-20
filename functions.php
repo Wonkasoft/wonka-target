@@ -36,10 +36,10 @@ function wonka_target_setup() {
 
 	add_image_size( 'wonka-target-thumbnail-avatar', 100, 100, true );
 
-	// This theme uses wp_nav_menu() in two locations.
+	// This theme uses wp_nav_menu() in four locations.
 	register_nav_menus( array(
 		'top'    => __( 'Top Menu', 'wonka-target' ),
-		'submenu' => __( 'Sub Menu', 'wonka-target' ),
+		'sub' => __( 'Sub Menu', 'wonka-target' ),
 		'sidebar' => __( 'Side Menu', 'wonka-target' ),
 		'footer' => __( 'Footer Menu', 'wonka-target' ),
 	) );
@@ -53,6 +53,7 @@ function wonka_target_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
+		'search-form',
 	) );
 
 	/*
@@ -115,7 +116,7 @@ add_action( 'wp_enqueue_scripts', 'wonka_target_enqueues' );
 				'page_contact_us',
 				),
 			),
-		'submenu' => array(
+		'sub' => array(
 			'name' => __('Sub Menu','wonka-target'),
 			'items' => array(
 				'link_cart',
@@ -123,6 +124,14 @@ add_action( 'wp_enqueue_scripts', 'wonka_target_enqueues' );
 				),
 			),
 		);
+	$wonka_start = apply_filters( 'wonka_target_starter_content', $wonka_start );
 	add_theme_support('starter-content', $wonka_start);
-	
- ?>
+
+}
+add_action( 'after_setup_theme', 'wonka_target_setup' );
+ 
+ function wonka_target_enqueues() {
+ 	wp_enqueue_style( 'style', get_stylesheet_uri());
+ }
+add_action( 'wp_enqueue_scripts', 'wonka_target_enqueues' );
+?>
