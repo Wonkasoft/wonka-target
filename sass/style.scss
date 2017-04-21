@@ -1,13 +1,13 @@
 /*
-    Theme Name: Wonka Targets
-    Theme URI: https://wonkasoft.com/themes/wonka-targets/
+    Theme Name: Wonka Target
+    Theme URI: https://wonkasoft.com/themes/wonka-target/
     Author: Wonkasoft Team (@wonkasoft)
     Author URI: https://wonkasoft.com
     Description: In 2017, our team wanted to build a new responsive site with a sleek, modern design. Our Tactical Theme has a full-width, and a container grid template. This theme is fully compatible with WooCommerce for your tactical store. Creating a Tactical website with WordPress has never been easier.
     Version: 1.0.0
     License: GNU General Public License v2 or later
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
-    Text Domain: wonka-targets
+    Text Domain: wonka-target
     Tags: custom, html5, css3, sass, scss, jquery, javascript, grid system, one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
     This theme, like WordPress, is licensed under the GPL.
     Use it to make something cool, have fun, and share what you've learned with others.
@@ -164,7 +164,12 @@ div.w-search-form input.form-control:first-child {
 }
 
 .w-slider {
-  height: 761px;
+  max-height: 763px;
+}
+
+.w-slider > div {
+  z-index: -1;
+  padding: 0;
 }
 
 .w-dealer-logos:before {
@@ -242,9 +247,19 @@ footer > div > div:last-child {
   border-right: none;
 }
 
-footer > div > div > h3 {
+footer > div > div > aside > h3 {
   color: #fff;
   font-family: Roboto Black;
+  text-transform: uppercase;
+}
+
+footer > div > div > aside > div > div > ul {
+  list-style: none;
+}
+
+footer > div > div > aside > div > div > ul > li {
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .w-copyright-bar {

@@ -4,16 +4,25 @@
 <footer class="container-fluid">
 <div class="row">
   <div class="col-xs-12 col-md-4">
-  <h3 class="text-center">CUSTOMER SERVICE</h3>
-    <hr/>
+  <?php
+     if(is_active_sidebar('footer-menu1')){
+     dynamic_sidebar('footer-menu1');
+     }
+     ?>
   </div> 
   <div class="col-xs-12 col-md-4">
-  <h3 class="text-center">POLICIES</h3>
-    <hr/>
+  <?php
+     if(is_active_sidebar('footer-menu2')){
+     dynamic_sidebar('footer-menu2');
+     }
+     ?>
   </div>
   <div class="col-xs-12 col-md-4">
-  <h3 class="text-center">CONNECT</h3>
-    <hr/>
+  <?php
+     if(is_active_sidebar('footer-menu3')){
+     dynamic_sidebar('footer-menu3');
+     }
+     ?>
   </div>
 </div>
 <div class="row">
