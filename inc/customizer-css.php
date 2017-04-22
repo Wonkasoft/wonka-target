@@ -11,8 +11,8 @@
 function wonka_target_customizer_css() {
 ?>
     <style type="text/css">
-      #customize-control-theme_slide_count > label > input {
-        width: 10%;
+      #customize-control-theme_slide_count > label > select {
+        width: 15%;
       }
     </style>
 

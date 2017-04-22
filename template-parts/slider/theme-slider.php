@@ -11,10 +11,10 @@
 
 <div class="col-xs-12 text-center">
 <?php 
-$value = get_theme_mod('theme_slider_check');
-  if ($value !== true) {
+$value = get_theme_mod('slider_check_setting', $default);
+  if (($value !== 'checked') && ($value !== true)) {
     $value2 = get_theme_mod('static_header');
-    if ($value2 !== null) {
+    if ($value2 !== true) {
       ?>
         test
       <?php
@@ -24,7 +24,7 @@ $value = get_theme_mod('theme_slider_check');
       <?php
     }
   } else {
-    $slide_count = get_theme_mod('theme_slide_count');
+    $slide_count = get_theme_mod('slide_count_setting');
     ?>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->

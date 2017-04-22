@@ -21,23 +21,23 @@ function wonka_target_customize_register( $wp_customize ) {
             ) );
 
             //Slider Enabled by default.
-              $wp_customize->add_setting('theme_slider_check', array(
+              $wp_customize->add_setting('slider_check_setting', array(
                 'default' => 'checked',
                 ));
 
-              $wp_customize->add_control('theme_slider_check', array(
+              $wp_customize->add_control('slider_check_control', array(
                 'label' => __('Enable Slider', 'wonka-target'),
                 'type' => 'checkbox',
                 'section' => 'slider_options',
-                'settings' => 'theme_slider_check',
+                'settings' => 'slider_check_setting',
                ));
 
               //Slider Count
-              $wp_customize->add_setting('theme_slide_count', array(
+              $wp_customize->add_setting('slide_count_setting', array(
               	'default' => '1',
               	));
 
-              $wp_customize->add_control('theme_slide_count', array(
+              $wp_customize->add_control('slide_count_control', array(
               	'label' => __('Slide Count:', 'wonka-target'),
                'type' => 'select',
                'choices' => array(
@@ -48,11 +48,11 @@ function wonka_target_customize_register( $wp_customize ) {
                 '5' => '5',
                 ),
               	'section' => 'slider_options',
-              	'settings' => 'theme_slide_count',
+              	'settings' => 'slide_count_setting',
               	));
 
               //Slider Build
-              for ($i=1; $i < get_theme_mod('theme_slide_count')+1; $i++) { 
+              for ($i=1; $i < get_theme_mod('slide_count_setting')+1; $i++) { 
                 //Slider Controls
                 $wp_customize->add_setting('theme_slider_'.$i, array(
                 'default'        => '',

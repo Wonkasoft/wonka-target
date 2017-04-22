@@ -102,7 +102,7 @@ function wonka_target_setup() {
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div></aside>',
 		'before_title' => '<h3 class="text-center">',
-		'after_title' => '</h3><hr /><div class="col-xs-12 col-md-8 col-md-offset-2">',
+		'after_title' => '</h3><hr /><div class="col-xs-12 col-md-6 col-md-offset-3">',
 	) );
 	register_sidebar( array(
 		'name' => 'Footer Menu 2',
@@ -111,7 +111,7 @@ function wonka_target_setup() {
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div></aside>',
 		'before_title' => '<h3 class="text-center">',
-		'after_title' => '</h3><hr /><div class="col-xs-12 col-md-8 col-md-offset-2">',
+		'after_title' => '</h3><hr /><div class="col-xs-12 col-md-6 col-md-offset-3">',
 	) );
 	register_sidebar( array(
 		'name' => 'Footer Menu 3',
@@ -120,7 +120,7 @@ function wonka_target_setup() {
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div></aside>',
 		'before_title' => '<h3 class="text-center">',
-		'after_title' => '</h3><hr /><div class="col-xs-12 col-md-8 col-md-offset-2">',
+		'after_title' => '</h3><hr /><div class="col-xs-12 col-md-6 col-md-offset-3">',
 	) );
 
 	// Define and register starter content to showcase the theme on new sites.
@@ -160,6 +160,22 @@ function wonka_target_setup() {
 	    return $form;
 	}
 	add_filter( 'get_search_form', 'wonka_target_search_form' );
+
+	// WooCommerce Support.
+	add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'wonka_target_setup' );
+
+//WooCommerce Setup.
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+function my_theme_wrapper_start() {
+  echo '<section id="main">';
+}
+
+function my_theme_wrapper_end() {
+  echo '</section>';
+}
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
 ?>
