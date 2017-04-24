@@ -28,13 +28,15 @@
                 } ?>
               </div>
               <?php wp_nav_menu( array( 
-                'menu_class' => 'w-sub-menu', 
-                'container_class' => 'col-xs-3 col-md-offset-6',
+                'menu_class' => 'w-sub-menu pull-right', 
+                'container_class' => 'hidden-xs hidden-sm col-md-4 pull-right',
                 'theme_location' => 'sub', 
                 'fallback_cb' => false,
                 ) ); ?>
           </div>
-          <div class="row">
+
+          <?php get_template_part('template-parts/header/search', 'form'); ?>
+
             <?php get_template_part('template-parts/navigation/nav', 'main' ); ?>
-            </div>
+
           </header>

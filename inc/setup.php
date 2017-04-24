@@ -151,7 +151,7 @@ function wonka_target_setup() {
 	    <div class="input-group w-search-form">
 	    <input type="text" class="form-control" placeholder="Search" value="' . get_search_query() . '" name="s" id="s" />
 	    <span class="input-group-btn">
-	          <button class="btn w-search-button" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true">
+	          <button class="btn w-search-button" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true">
 	          </span></button>
 	        </span>
 	    </div>
@@ -178,4 +178,6 @@ function my_theme_wrapper_end() {
 }
 add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
-?>
+
+// Includes Walker Class
+require get_parent_theme_file_path('/inc/wonka-walker.php');

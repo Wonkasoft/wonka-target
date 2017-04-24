@@ -20,7 +20,7 @@
 // Theme Colors
 $body-text: #fff;
 $header-color: linear-gradient(-214deg, rgba(37, 60, 94, .8) 0%, rgba(37, 60, 94, 1) 100%);
-$navbar-color: #505148;
+$navbar-color: linear-gradient(-214deg, rgba(#505148, .8) 0%, rgba(#505148, 1) 100%);
 $whats-new-section: #5dbeff;
 $dealers-section: #0b1316;
 $dealer-placeholders: rgba(55,55,55, .7);
@@ -49,6 +49,8 @@ body {
 }
 
 * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -86,28 +88,52 @@ Header
 
 .w-head-space > div {
   margin-top: 10px;
-  padding-bottom: 60px;
+  padding-bottom: 45px;
+}
+
+.w-search-form {
+  position: relative;
+  top: 28px;
+}
+
+.w-search-form > div {
+  margin-right: 30px;
+  z-index: 78;
+  position: relative;
+}
+
+div.w-search-form input.form-control:first-child {
+  border-radius: 20px 20px 0 0;
+}
+
+.w-search-button {
+  background: transparent;
+}
+
+.w-search-button > span {
+  color: #fff;
+  font-size: 18px;
 }
 
 .w-nav-bar {
-  background: $navbar-color;
-  padding: 2px;
-  height: 38px;
+  height: 50px;
   box-shadow: 0px 4px 8px 2px #000;
   position: relative;
+  background: #000;
   z-index: 75;
 }
 
+.w-nav-color {
+  background: $navbar-color;
+}
+
 .w-primary-menu {
-  margin: -2px 0 0;
   vertical-align: middle;
 }
 
 .w-primary-menu > li {
     list-style: none;
-    display: inline-block;
-    padding:  5px 40px;
-    height: 38px;
+    height: 50px;
     border-right:  1px solid #fff;
 }
 
@@ -152,23 +178,6 @@ Header
 
 .w-sub-menu > li:last-child {
     border: none;
-}
-
-.w-search-form {
-  margin-top: 1.5px;
-}
-
-div.w-search-form input.form-control:first-child {
-  border-radius: 20px 20px 0 0;
-}
-
-.w-search-button {
-  background: transparent;
-}
-
-.w-search-button > span {
-  color: #fff;
-  font-size: 18px;
 }
 
 .w-slider {
@@ -239,6 +248,7 @@ div.w-search-form input.form-control:first-child {
 
 footer {
   position: absolute;
+  clear: both;
   width: 100%;
   background: $footer-color;
 }
