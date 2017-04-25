@@ -15,7 +15,6 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary_walker">
-        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -27,7 +26,7 @@
   <?php wp_nav_menu( array( 
     'menu' => 'top',
     'menu_class' => 'nav navbar-nav w-primary-menu', 
-    'container_class' => 'collapse navbar-collapse col-xs-10 col-md-10 text-center',
+    'container_class' => 'collapse navbar-collapse',
     'container_id' => 'primary_walker',
     'theme_location' => 'top', 
     'fallback_cb' => 'WS_Walker_Nav_Primary::fallback',

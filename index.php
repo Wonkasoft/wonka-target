@@ -35,12 +35,12 @@ get_header(); ?>
           </div>
 
           <div class="row w-quick-select">
-            <div class="col-xs-6 text-center">
+            <div class="col-xs-12 col-md-6 text-center">
               <div class="col-xs-12 col-md-offset-2">
                 <img class="img-responsive" src="//wonkasoft.com/ar500-targets/wp-content/uploads/2017/04/Monthly-Specials-1.jpg">
               </div>
             </div>
-            <div class="col-xs-6 text-center">
+            <div class="col-xs-12 col-md-6 text-center">
               <div class="col-xs-12 col-md-offset-2">
                 <img class="img-responsive" src="//wonkasoft.com/ar500-targets/wp-content/uploads/2017/04/New-Arrivals-1.jpg">
               </div>

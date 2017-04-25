@@ -18,7 +18,6 @@
 \*------------------------------------*/
 
 // Theme Colors
-$body-text: #fff;
 $header-color: linear-gradient(-214deg, rgba(37, 60, 94, .8) 0%, rgba(37, 60, 94, 1) 100%);
 $navbar-color: linear-gradient(-214deg, rgba(#505148, .8) 0%, rgba(#505148, 1) 100%);
 $whats-new-section: #5dbeff;
@@ -44,7 +43,6 @@ html, body {
 }
 
 body {
-  color: $body-text;
   font-family: Roboto medium;
 }
 
@@ -73,7 +71,7 @@ Header
 */
 #w-header {
   background: $header-color;
-  height: 140px;
+  height: 175px;
 }
 
 .custom-logo {
@@ -84,11 +82,11 @@ Header
 
 .w-head-space {
   margin: 0 75px;
+  height: 125px;
 }
 
 .w-head-space > div {
   margin-top: 10px;
-  padding-bottom: 45px;
 }
 
 .w-search-form {
@@ -125,6 +123,41 @@ div.w-search-form input.form-control:first-child {
 
 .w-nav-color {
   background: $navbar-color;
+}
+
+.navbar {
+  border: none;
+}
+
+.navbar-default .navbar-toggle {
+
+}
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+    top: 1px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+    top: 2px;
+}
+
+.navbar-toggle .icon-bar {
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+    background-color: transparent;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+    top: -6px;
+    transform: rotate(-45deg);
 }
 
 .w-primary-menu {
@@ -228,12 +261,11 @@ div.w-search-form input.form-control:first-child {
 
 .w-quick-select {
   background: $whats-new-section;
-  height: 435px;
-  padding: 20px;
+  height: 100%;
 }
 
 .w-quick-select > div {
-  border-right: 2px solid #fff;
+  /* border-right: 1px solid #fff; */
   height: 395px;
 }
 
@@ -250,12 +282,15 @@ footer {
   position: absolute;
   clear: both;
   width: 100%;
+}
+
+footer > div {
   background: $footer-color;
 }
 
 footer > div > div {
-  height: 275px;
-  border-right: 2px solid #fff;
+  /* height: 275px; */
+  /* border-right: 2px solid #fff; */
 }
 
 footer > div > div:last-child {
@@ -289,7 +324,17 @@ footer > div > div > aside > div > div > ul > li > a:hover, footer > div > div >
 .w-copyright-bar {
   background: $copyright-bar;
   color: $copyright-text;
-  height: 35px;
+  height: 55px;
   vertical-align: middle;
-  padding: 8px;
+  padding: 10px;
+}
+
+.w-copyright-bar > a {
+  color: #fff;
+}
+
+.w-copyright-bar > a:hover, .w-copyright-bar > a:focus, .w-copyright-bar > a:active {
+  color: #333;
+  text-decoration: none;
+  opacity: .8;
 }

@@ -6,7 +6,7 @@
 */
 ?>
 <div class="row w-search-form">
-<div class="col-xs-12 col-md-2 text-center pull-right">
+<div class="hidden-xs hidden-sm col-md-3 text-center pull-right">
       <?php get_search_form(); ?>
 </div>
 </div>

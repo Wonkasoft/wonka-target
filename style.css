@@ -27,7 +27,6 @@ html, body {
   height: 100%; }
 
 body {
-  color: #fff;
   font-family: Roboto medium; }
 
 * {
@@ -52,7 +51,7 @@ Header
 */
 #w-header {
   background: linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%);
-  height: 140px; }
+  height: 175px; }
 
 .custom-logo {
   position: absolute;
@@ -60,11 +59,11 @@ Header
   left: 50px; }
 
 .w-head-space {
-  margin: 0 75px; }
+  margin: 0 75px;
+  height: 125px; }
 
 .w-head-space > div {
-  margin-top: 10px;
-  padding-bottom: 45px; }
+  margin-top: 10px; }
 
 .w-search-form {
   position: relative;
@@ -94,6 +93,30 @@ div.w-search-form input.form-control:first-child {
 
 .w-nav-color {
   background: linear-gradient(-214deg, rgba(80, 81, 72, 0.8) 0%, #505148 100%); }
+
+.navbar {
+  border: none; }
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+  top: 1px; }
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  top: 2px; }
+
+.navbar-toggle .icon-bar {
+  position: relative;
+  transition: all .2s ease-in-out; }
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+  top: 6px;
+  transform: rotate(45deg); }
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+  background-color: transparent; }
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+  top: -6px;
+  transform: rotate(-45deg); }
 
 .w-primary-menu {
   vertical-align: middle; }
@@ -179,11 +202,10 @@ div.w-search-form input.form-control:first-child {
 
 .w-quick-select {
   background: #5dbeff;
-  height: 435px;
-  padding: 20px; }
+  height: 100%; }
 
 .w-quick-select > div {
-  border-right: 2px solid #fff;
+  /* border-right: 1px solid #fff; */
   height: 395px; }
 
 .w-quick-select > div:last-child {
@@ -196,12 +218,14 @@ div.w-search-form input.form-control:first-child {
 footer {
   position: absolute;
   clear: both;
-  width: 100%;
+  width: 100%; }
+
+footer > div {
   background: #000; }
 
 footer > div > div {
-  height: 275px;
-  border-right: 2px solid #fff; }
+  /* height: 275px; */
+  /* border-right: 2px solid #fff; */ }
 
 footer > div > div:last-child {
   border-right: none; }
@@ -229,6 +253,14 @@ footer > div > div > aside > div > div > ul > li > a:hover, footer > div > div >
 .w-copyright-bar {
   background: #f01;
   color: #fff;
-  height: 35px;
+  height: 55px;
   vertical-align: middle;
-  padding: 8px; }
+  padding: 10px; }
+
+.w-copyright-bar > a {
+  color: #fff; }
+
+.w-copyright-bar > a:hover, .w-copyright-bar > a:focus, .w-copyright-bar > a:active {
+  color: #333;
+  text-decoration: none;
+  opacity: .8; }
